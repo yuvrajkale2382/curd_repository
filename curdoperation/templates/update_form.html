@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Update Form</title>
+     <meta charset="utf-8">
+    {% load staticfiles %}
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   <link rel='stylesheet' href="{% static 'bootstrap/css/font-awesome-5.8.1.css' %}">
+    <link rel='stylesheet' href="{% static 'bootstrap/css/bootstrap.css' %}">
+     <link rel='stylesheet' href="{% static 'bootstrap/css/mdb.css' %}">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <div class="modal-success shadow">
+                <div class="modal-header blue-gradient-rgba">
+                    <h1 class="text-center">Update Here</h1>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                {% csrf_token %}
+                {{ uform }}<br>
+                <center>
+                    <input type="submit" value="Update" class="btn btn-success">
+                    <input type="reset" value="Clear" class="btn btn-danger">
+                </center>
+            </form>
+                </div>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <a href="/#/"><i class="fa fa-home fa-3x"></i></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
